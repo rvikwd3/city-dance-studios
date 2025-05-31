@@ -1,0 +1,2 @@
+GET {{$dotenv API_BASE_URL}}/appointments?max=10&minDate=2025-05-30T01:59:26Z&maxDate=2025-05-31T01:59:26Z
+Authorization: Basic {{$dotenv ACUITY_USER_ID}}:{{$dotenv ACUITY_API_KEY}}

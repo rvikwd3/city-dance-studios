@@ -1,0 +1,2 @@
+GET {{$dotenv API_BASE_URL}}/appointment-types
+Authorization: Basic {{$dotenv ACUITY_USER_ID}}:{{$dotenv ACUITY_API_KEY}}

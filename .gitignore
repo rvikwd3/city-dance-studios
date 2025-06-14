@@ -5,3 +5,5 @@ src/gatsby-types.d.ts
 android
 ios
 .env*
+env/
+.vscode/rest-client.env.json

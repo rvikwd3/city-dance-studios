@@ -1,2 +1,18 @@
-GET {{$dotenv API_BASE_URL}}/availability/classes?minDate=2025-05-31T09:00:00-0700&maxDate=2025-06-01T00:00:00-0700
-Authorization: Basic {{$dotenv ACUITY_USER_ID}}:{{$dotenv ACUITY_API_KEY}}
+{{
+    var today = new Date();
+    var endOfToday = new Date(today.getTime());
+    endOfToday.setUTCHours(23,59,59,999);
+
+    // Set to tomorrow for mocking
+    today.setDate(today.getDate() + 1);
+    endOfToday.setDate(endOfToday.getDate() + 1);
+
+    console.log(today.toString())
+    console.log(endOfToday.toString())
+
+    exports.today = today.toISOString();
+    exports.endOfToday = endOfToday.toISOString();
+}}
+
+GET {{API_BASE_URL}}/availability/classes?minDate={{today}}&maxDate={{endOfToday}}
+Authorization: Basic {{API_USER_ID}}:{{API_KEY}}

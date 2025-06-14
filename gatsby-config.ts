@@ -5,8 +5,6 @@ dotenv.config({
   path: `.env.${process.env.NODE_ENV}`
 })
 
-console.log(`.env.${process.env.NODE_ENV}`)
-
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `City Dance Studios`,

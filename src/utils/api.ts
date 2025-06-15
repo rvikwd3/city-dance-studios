@@ -92,6 +92,7 @@ export const fetchClassesByDateRange = async (
     }
 
     const data: Class[] = await response.json();
+
     return data;
   } catch (error) {
     console.error(

@@ -15,5 +15,5 @@
 }}
 
 # @no-cookie-jar
-GET {{API_BASE_URL}}/appointments?max=100&minDate={{today}}&maxDate={{endOfToday}}
+GET {{GATSBY_API_BASE_URL}}/appointments?max=100&minDate={{today}}&maxDate={{endOfToday}}
 Authorization: Basic {{API_USER_ID}}:{{API_KEY}}

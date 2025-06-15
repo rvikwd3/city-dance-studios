@@ -1,25 +1,29 @@
 {{
     // const utils = require('./utils.js');
-    console.log("Utils loaded successfully");
+    // console.log("Utils loaded successfully");
 
-    var today = new Date();
-    today.setHours(0, 0, 0, 0);
-    today = Math.floor(today.getTime() / 1000);
+    // var today = new Date();
+    var tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+    tomorrow = Math.floor(tomorrow.getTime() / 1000);
 
-    var endOfToday = new Date();
-    endOfToday.setHours(23, 59, 59, 999);
-    endOfToday = Math.floor(endOfToday.getTime() / 1000);
+    // var endOfToday = new Date();
+    var endOfTomorrow = new Date();
+    endOfTomorrow.setDate(endOfTomorrow.getDate() + 1);
+    endOfTomorrow.setHours(23, 59, 59, 999);
+    endOfTomorrow = Math.floor(endOfTomorrow.getTime() / 1000);
 
-    exports.today = today;
-    exports.endOfToday = endOfToday;
+    exports.tomorrow = tomorrow;
+    exports.endOfTomorrow = endOfTomorrow;
 }}
 
 # @no-cookie-jar
-GET {{API_BASE_URL}}/availability/classes?minDate={{today}}&maxDate={{endOfToday}}&timezone=America/Los_Angeles
+GET {{GATSBY_API_BASE_URL}}/availability/classes?minDate={{today}}&maxDate={{endOfToday}}&timezone=America/Los_Angeles
 Authorization: Basic {{API_USER_ID}}:{{API_KEY}}
 
 ###
 
 # @no-cookie-jar
-GET {{API_BASE_URL}}/availability/classes?minDate=2025-06-15&maxDate=2025-06-16&timezone=America/Los_Angeles
+GET {{GATSBY_API_BASE_URL}}/availability/classes?minDate={{tomorrow}}&maxDate={{endOfTomorrow}}&timezone=America/Los_Angeles
 Authorization: Basic {{API_USER_ID}}:{{API_KEY}}

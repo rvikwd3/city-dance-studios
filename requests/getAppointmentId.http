@@ -1,2 +1,2 @@
-GET {{$dotenv API_BASE_URL}}/appointments/95993030
-Authorization: Basic {{$dotenv ACUITY_USER_ID}}:{{$dotenv ACUITY_API_KEY}}
+GET {{API_BASE_URL}}/appointments/95993030
+Authorization: Basic {{API_USER_ID}}:{{API_KEY}}

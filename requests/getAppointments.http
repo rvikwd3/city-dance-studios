@@ -1,2 +1,19 @@
-GET {{$dotenv API_BASE_URL}}/appointments?max=10&minDate=2025-05-30T01:59:26Z&maxDate=2025-05-31T01:59:26Z
-Authorization: Basic {{$dotenv ACUITY_USER_ID}}:{{$dotenv ACUITY_API_KEY}}
+{{
+    // const utils = require('./utils.js');
+    console.log("Utils loaded successfully");
+
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    today = Math.floor(today.getTime() / 1000);
+
+    var endOfToday = new Date();
+    endOfToday.setHours(23, 59, 59, 999);
+    endOfToday = Math.floor(endOfToday.getTime() / 1000);
+
+    exports.today = today;
+    exports.endOfToday = endOfToday;
+}}
+
+# @no-cookie-jar
+GET {{API_BASE_URL}}/appointments?max=100&minDate={{today}}&maxDate={{endOfToday}}
+Authorization: Basic {{API_USER_ID}}:{{API_KEY}}

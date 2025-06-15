@@ -1,37 +1,43 @@
-import { Appointment, Class } from "../types"
+import { Appointment, Class } from "../types";
 
 export const fetchAppointments = async (): Promise<Appointment[]> => {
   try {
-    console.log(process.env.GATSBY_GATSBY_API_BASE_URL)
-    const response = await fetch(`${process.env.GATSBY_GATSBY_API_BASE_URL}/appointments`)
-    
-    if (!response.ok) {
-      throw new Error(`API error: ${response.status}`)
-    }
-    
-    const data: Appointment[] = await response.json()
-    return data.slice(0, 9)
-  } catch (error) {
-    console.error("Error fetching appointments:", error)
-    throw error
-  }
-}
+    console.log(process.env.GATSBY_API_BASE_URL);
+    const response = await fetch(
+      `${process.env.GATSBY_API_BASE_URL}/appointments`
+    );
 
-export const fetchAppointmentById = async (id: number): Promise<Appointment> => {
-  try {
-    const response = await fetch(`${process.env.GATSBY_API_BASE_URL}/appointments/${id}`)
-    
     if (!response.ok) {
-      throw new Error(`API error: ${response.status}`)
+      throw new Error(`API error: ${response.status}`);
     }
-    
-    const data: Appointment = await response.json()
-    return data
+
+    const data: Appointment[] = await response.json();
+    return data.slice(0, 9);
   } catch (error) {
-    console.error(`Error fetching appointment ${id}:`, error)
-    throw error
+    console.error("Error fetching appointments:", error);
+    throw error;
   }
-}
+};
+
+export const fetchAppointmentById = async (
+  id: number
+): Promise<Appointment> => {
+  try {
+    const response = await fetch(
+      `${process.env.GATSBY_API_BASE_URL}/appointments/${id}`
+    );
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status}`);
+    }
+
+    const data: Appointment = await response.json();
+    return data;
+  } catch (error) {
+    console.error(`Error fetching appointment ${id}:`, error);
+    throw error;
+  }
+};
 
 export const fetchAppointmentsByDateRange = async (
   minDate: string,
@@ -44,7 +50,9 @@ export const fetchAppointmentsByDateRange = async (
     });
 
     const response = await fetch(
-      `${process.env.GATSBY_API_BASE_URL}/appointments?${queryParams.toString()}`
+      `${
+        process.env.GATSBY_API_BASE_URL
+      }/appointments?${queryParams.toString()}`
     );
 
     if (!response.ok) {
@@ -66,6 +74,7 @@ export const fetchClassesByDateRange = async (
   minDate: string,
   maxDate: string
 ): Promise<Class[]> => {
+  console.log(process.env.GATSBY_API_BASE_URL);
   try {
     const queryParams = new URLSearchParams({
       minDate,
@@ -73,7 +82,9 @@ export const fetchClassesByDateRange = async (
     });
 
     const response = await fetch(
-      `${process.env.GATSBY_API_BASE_URL}/availability/classes?${queryParams.toString()}`
+      `${
+        process.env.GATSBY_API_BASE_URL
+      }/availability/classes?${queryParams.toString()}`
     );
 
     if (!response.ok) {

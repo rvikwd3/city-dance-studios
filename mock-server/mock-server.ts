@@ -8,7 +8,8 @@ app.use(
     origin: ["http://localhost:8000"],
     methods: ["GET"],
   })
-); // Enable CORS for all routes
+); // Enable CORS for localhost routes
+// app.use(cors());
 const PORT = 4000;
 
 app.get("/appointments", (req, res) => {
@@ -22,6 +23,14 @@ app.get("/appointments", (req, res) => {
 app.get("/availability/classes", (req, res) => {
   const data = fs.readFileSync(
     new URL("../mock-data/getAvailabilityClasses.json", import.meta.url),
+    "utf-8"
+  );
+  res.json(JSON.parse(data));
+});
+
+app.get("/clients", (req, res) => {
+  const data = fs.readFileSync(
+    new URL("../mock-data/getClients.json", import.meta.url),
     "utf-8"
   );
   res.json(JSON.parse(data));

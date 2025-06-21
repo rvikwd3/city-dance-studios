@@ -1,19 +1,14 @@
 {{
-    // const utils = require('./utils.js');
+    const utils = require('./utils.js');
     console.log("Utils loaded successfully");
 
-    var today = new Date();
-    today.setHours(0, 0, 0, 0);
-    today = Math.floor(today.getTime() / 1000);
+    var thirtyMinutesAgo = utils.date.timestampToLocalISO(utils.date.getThirtyMinutesAgo())
+    var endOfToday = utils.date.timestampToLocalISO(utils.date.getEndOfToday())
 
-    var endOfToday = new Date();
-    endOfToday.setHours(23, 59, 59, 999);
-    endOfToday = Math.floor(endOfToday.getTime() / 1000);
-
-    exports.today = today;
+    exports.thirtyMinutesAgo = thirtyMinutesAgo;
     exports.endOfToday = endOfToday;
 }}
 
 # @no-cookie-jar
-GET {{GATSBY_API_BASE_URL}}/appointments?max=100&minDate={{today}}&maxDate={{endOfToday}}
+GET {{GATSBY_API_BASE_URL}}/appointments?max=100&minDate={{thirtyMinutesAgo}}&maxDate={{endOfToday}}
 Authorization: Basic {{API_USER_ID}}:{{API_KEY}}

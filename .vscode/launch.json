@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Gatsby Develop (NODE_ENV=development)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "develop"],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Gatsby Serve (NODE_ENV=production)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "serve"],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Gatsby Build (just builds production)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "build"],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}

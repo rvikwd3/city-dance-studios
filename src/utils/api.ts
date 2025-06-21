@@ -1,4 +1,4 @@
-import { Appointment, Class } from "../types";
+import { Appointment, Class, Client } from "../types";
 
 export const fetchAppointments = async (): Promise<Appointment[]> => {
   try {
@@ -99,6 +99,26 @@ export const fetchClassesByDateRange = async (
       `Error fetching classes between ${minDate} and ${maxDate}:`,
       error
     );
+    throw error;
+  }
+};
+
+export const fetchClients = async (search: string): Promise<Client[]> => {
+  try {
+    const queryParams = new URLSearchParams({ search });
+
+    const response = await fetch(
+      `${process.env.GATSBY_API_BASE_URL}/clients?${queryParams.toString()}`
+    );
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status}`);
+    }
+
+    const data: Client[] = await response.json();
+    return data;
+  } catch (error) {
+    console.error(`Error fetching clients with search query "${search}":`, error);
     throw error;
   }
 };

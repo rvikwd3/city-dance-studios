@@ -1,29 +1,16 @@
 {{
-    // const utils = require('./utils.js');
+    const utils = require('./utils.js');
     // console.log("Utils loaded successfully");
 
-    // var today = new Date();
-    var tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    tomorrow.setHours(0, 0, 0, 0);
-    tomorrow = Math.floor(tomorrow.getTime() / 1000);
+    today = utils.date.timestampToLocalISO(utils.date.getStartOfToday());
+    tomorrow = utils.date.timestampToLocalISO(utils.date.getEndOfTomorrow());
 
-    // var endOfToday = new Date();
-    var endOfTomorrow = new Date();
-    endOfTomorrow.setDate(endOfTomorrow.getDate() + 1);
-    endOfTomorrow.setHours(23, 59, 59, 999);
-    endOfTomorrow = Math.floor(endOfTomorrow.getTime() / 1000);
-
+    exports.today = today;
     exports.tomorrow = tomorrow;
-    exports.endOfTomorrow = endOfTomorrow;
 }}
-
-# @no-cookie-jar
-GET {{GATSBY_API_BASE_URL}}/availability/classes?minDate={{today}}&maxDate={{endOfToday}}&timezone=America/Los_Angeles
-Authorization: Basic {{API_USER_ID}}:{{API_KEY}}
 
 ###
 
 # @no-cookie-jar
-GET {{GATSBY_API_BASE_URL}}/availability/classes?minDate={{tomorrow}}&maxDate={{endOfTomorrow}}&timezone=America/Los_Angeles
+GET {{GATSBY_API_BASE_URL}}/availability/classes?max=15&minDate={{today}}&maxDate={{tomorrow}}&timezone=America/Los_Angeles
 Authorization: Basic {{API_USER_ID}}:{{API_KEY}}

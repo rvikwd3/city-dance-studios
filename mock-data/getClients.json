@@ -1,0 +1,212 @@
+[
+  {
+    "firstName": "Alexander",
+    "lastName": "Mitchell",
+    "email": "alexander.mitchell@example.com",
+    "phone": "797.927.4144",
+    "notes": "Prefers morning appointments"
+  },
+  {
+    "firstName": "Kevin",
+    "lastName": "Barber",
+    "email": "kevin.barber@example.com",
+    "phone": "297.402.1454",
+    "notes": "Contracted on staff"
+  },
+  {
+    "firstName": "Jessica",
+    "lastName": "Jackson",
+    "email": "jessica.jackson@example.com",
+    "phone": "(172)293-2225",
+    "notes": ""
+  },
+  {
+    "firstName": "Steven",
+    "lastName": "Mcknight",
+    "email": "steven.mcknight@example.com",
+    "phone": "(686)591-7639",
+    "notes": ""
+  },
+  {
+    "firstName": "John",
+    "lastName": "Collins",
+    "email": "john.collins@example.com",
+    "phone": "611-600-4457",
+    "notes": ""
+  },
+  {
+    "firstName": "Deanna",
+    "lastName": "Ramos",
+    "email": "deanna.ramos@example.com",
+    "phone": "001-596-478-3618",
+    "notes": "Late cancellations"
+  },
+  {
+    "firstName": "Jose",
+    "lastName": "Johnson",
+    "email": "jose.johnson@example.com",
+    "phone": "377.411.2801",
+    "notes": ""
+  },
+  {
+    "firstName": "Janet",
+    "lastName": "Cruz",
+    "email": "janet.cruz@example.com",
+    "phone": "0880495246",
+    "notes": ""
+  },
+  {
+    "firstName": "Julie",
+    "lastName": "Moore",
+    "email": "julie.moore@example.com",
+    "phone": "(772)945-3683",
+    "notes": "Referral"
+  },
+  {
+    "firstName": "Christopher",
+    "lastName": "Simpson",
+    "email": "christopher.simpson@example.com",
+    "phone": "307.139.4086",
+    "notes": "Late payment history"
+  },
+  {
+    "firstName": "Susan",
+    "lastName": "Williams",
+    "email": "susan.williams@example.com",
+    "phone": "(052)537-3289",
+    "notes": ""
+  },
+  {
+    "firstName": "Stephen",
+    "lastName": "Burns",
+    "email": "stephen.burns@example.com",
+    "phone": "969.977.7006",
+    "notes": "Late payment history"
+  },
+  {
+    "firstName": "Anthony",
+    "lastName": "Rose",
+    "email": "anthony.rose@example.com",
+    "phone": "829-516-8658",
+    "notes": ""
+  },
+  {
+    "firstName": "Holly",
+    "lastName": "Morrison",
+    "email": "holly.morrison@example.com",
+    "phone": "254.854.1924",
+    "notes": ""
+  },
+  {
+    "firstName": "Michelle",
+    "lastName": "Miller",
+    "email": "michelle.miller@example.com",
+    "phone": "(722)135-0769",
+    "notes": ""
+  },
+  {
+    "firstName": "Heidi",
+    "lastName": "Haas",
+    "email": "heidi.haas@example.com",
+    "phone": "(425)291-9313",
+    "notes": ""
+  },
+  {
+    "firstName": "Maria",
+    "lastName": "Hicks",
+    "email": "maria.hicks@example.com",
+    "phone": "(732)021-3012",
+    "notes": ""
+  },
+  {
+    "firstName": "Taylor",
+    "lastName": "Trujillo",
+    "email": "taylor.trujillo@example.com",
+    "phone": "001-483-358-2303",
+    "notes": ""
+  },
+  {
+    "firstName": "Nicholas",
+    "lastName": "Reeves",
+    "email": "nicholas.reeves@example.com",
+    "phone": "+1-194-303-9117",
+    "notes": ""
+  },
+  {
+    "firstName": "Mary",
+    "lastName": "Buck",
+    "email": "mary.buck@example.com",
+    "phone": "+1-648-069-0786",
+    "notes": ""
+  },
+  {
+    "firstName": "William",
+    "lastName": "Hernandez",
+    "email": "william.hernandez@example.com",
+    "phone": "337.312.8789",
+    "notes": ""
+  },
+  {
+    "firstName": "Melanie",
+    "lastName": "Peterson",
+    "email": "melanie.peterson@example.com",
+    "phone": "658.035.2242",
+    "notes": "First-time client"
+  },
+  {
+    "firstName": "Michaela",
+    "lastName": "Robinson",
+    "email": "michaela.robinson@example.com",
+    "phone": "051-151-1705",
+    "notes": "Contracted on staff"
+  },
+  {
+    "firstName": "Sara",
+    "lastName": "Sutton",
+    "email": "sara.sutton@example.com",
+    "phone": "(753)241-4628",
+    "notes": ""
+  },
+  {
+    "firstName": "Kristin",
+    "lastName": "Becker",
+    "email": "kristin.becker@example.com",
+    "phone": "+1-908-488-6862",
+    "notes": "Referral"
+  },
+  {
+    "firstName": "Justin",
+    "lastName": "Martin",
+    "email": "justin.martin@example.com",
+    "phone": "467.644.2467",
+    "notes": "Late cancellations"
+  },
+  {
+    "firstName": "Thomas",
+    "lastName": "Shah",
+    "email": "thomas.shah@example.com",
+    "phone": "(153)573-4651",
+    "notes": ""
+  },
+  {
+    "firstName": "Matthew",
+    "lastName": "Walker",
+    "email": "matthew.walker@example.com",
+    "phone": "520-209-0709",
+    "notes": ""
+  },
+  {
+    "firstName": "Steven",
+    "lastName": "Yang",
+    "email": "steven.yang@example.com",
+    "phone": "596-728-3568",
+    "notes": "First-time client"
+  },
+  {
+    "firstName": "Brittany",
+    "lastName": "Jarvis",
+    "email": "brittany.jarvis@example.com",
+    "phone": "(079)917-3495",
+    "notes": ""
+  }
+]

@@ -11,6 +11,7 @@ const httpyacUtils = {
   date: {
     /**
      * Convert a Date object to ISO string with local timezone offset
+     * Removes Milliseconds from date
      * @param {Date} date - The date to convert (defaults to current time)
      * @returns {string} ISO string with timezone offset (e.g., "2024-06-15T15:30:45-07:00")
      */
@@ -27,11 +28,11 @@ const httpyacUtils = {
       const hours = String(date.getHours()).padStart(2, '0');
       const minutes = String(date.getMinutes()).padStart(2, '0');
       const seconds = String(date.getSeconds()).padStart(2, '0');
-      const milliseconds = String(date.getMilliseconds()).padStart(3, '0');
+      const milliseconds = String(date.getMilliseconds()).padStart(3, '0'); // Not Used
 
       const timezoneOffset = `${offsetSign}${offsetHours.toString().padStart(2, '0')}:${offsetMinutes.toString().padStart(2, '0')}`;
 
-      return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.${milliseconds}${timezoneOffset}`;
+      return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}${timezoneOffset}`;
     },
 
     /**
@@ -74,6 +75,15 @@ const httpyacUtils = {
       tomorrow.setDate(tomorrow.getDate() + 1);
       tomorrow.setHours(23, 59, 59, 999);
       return Math.floor(tomorrow.getTime() / 1000);
+    },
+
+    getThirtyMinutesAgo: () => {
+      const now = new Date();
+
+      // Subtract 30 minutes (in milliseconds)
+      now.setTime(now.getTime() - 30 * 60 * 1000);
+
+      return Math.floor(now.getTime() / 1000); // Returns Unix timestamp in milliseconds
     },
 
     /**

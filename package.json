@@ -1,0 +1,32 @@
+{
+  "name": "city-dance-studios",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "web": "pnpm --filter \"@city-dance-studios/web\"",
+    "mobile": "pnpm --filter \"@city-dance-studios/mobile\"",
+    "start": "pnpm --filter \"@city-dance-studios/web\" run start"
+  },
+  "keywords": [],
+  "author": "Ravikiran Kawade",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.2",
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "dotenv": "^16.5.0",
+    "turbo": "^2.5.4",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "create-remix": "^2.16.8",
+    "create-turbo": "^2.5.4",
+    "remix": "^2.16.8"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@city-dance-studios/ui",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.2",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-native": "^0.80.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

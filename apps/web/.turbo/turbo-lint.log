@@ -1,0 +1,4 @@
+
+> web@ lint C:\Users\rvikw\Documents\Code\citydance\city-dance-studios\apps\web
+> eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .
+
